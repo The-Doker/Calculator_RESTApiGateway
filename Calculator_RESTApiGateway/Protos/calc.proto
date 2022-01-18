@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "Calculator_gRPC.BL";
+
+package calc;
+
+// The greeting service definition.
+service Calculator {
+  rpc Calculate (CalcRequest) returns (CalcReply);
+}
+
+// The request message containing the user's name.
+message CalcRequest {
+  string jsonData = 1;
+}
+
+// The response message containing the greetings.
+message CalcReply {
+  string jsonData = 1;
+}
